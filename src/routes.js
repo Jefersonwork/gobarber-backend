@@ -19,6 +19,8 @@ const upload = multer(multerConfig);
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
 
+routes.get('/', (req, res) => res.send('API 1 - GoBarber'));
+
 routes.use(authMiddleware);
 
 routes.put('/users', UserController.update);
